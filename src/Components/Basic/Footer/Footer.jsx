@@ -5,11 +5,11 @@ import logo from '../../../assets/logo.svg';
 
 const Footer = () => {
     return (
-        <footer className='bg-light w-100 pb-0 pt-5'>
+        <footer className='bgfooter w-100 pb-0 pt-5'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-lg-3">
-                        <Link to='/' className='logo'><img src={logo} alt="fisino" /></Link>
+                        <h5>NEW PRODUCT</h5>
                         <br />
                         <p className='f-t pt-4'>Telephone : +1-202-555-0184</p>
                         <p className='f-e'>Email : hello@fisinostore.co.uk</p>

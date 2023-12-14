@@ -36,13 +36,13 @@ const handlepost=(data)=>{
 }
 
   return (
-    <div className="register mt-5 py-5">
-           <div className="container">
-      <div className="row">
-        <div className="col-4">
+    <div className="register  py-5">
+           <div className="container mt-5">
+      <div className="row vvx mt-5">
+        <div className="col-2">
 
         </div>
-        <div className="col-8">
+        <div className="col-8 bg-info p-5">
               <form onSubmit={handleSubmit(handlepost)}>
               <div class="mb-3">
                
@@ -107,6 +107,9 @@ const handlepost=(data)=>{
   
               <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+        </div>
+        <div className="col-2">
+
         </div>
       </div>
      </div>

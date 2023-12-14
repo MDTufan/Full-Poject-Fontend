@@ -132,6 +132,10 @@ html {
     border: 1px solid #00000039;
 }
 
+.bgfooter {
+    background-color: #002c3e ;
+    color: white;
+}
 .bg-opacity-85 {
     --bs-bg-opacity: 0.85;
 }
@@ -691,4 +695,14 @@ text-decoration: none;
 color: black;
 font-size: 18px;
 font-weight: bold;
+}
+
+.vvx{
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+}
+
+.texticon{
+    background-color: #000 !important;
+    font-weight: bold !important;
 }

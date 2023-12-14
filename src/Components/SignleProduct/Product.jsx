@@ -22,7 +22,11 @@ const Product = ({ product,setproductid,productid}) => {
                         onClick={() => setproductid(product)}
                     > 
                    
-                      <Modal product={product} setproductid={setproductid} productid={productid}/>  
+                     {
+                        product && <div>
+                             <Modal product={product}  setproductid={setproductid} productid={productid}/>  
+                        </div>
+                     }
                     
                     </label>
                 </div>

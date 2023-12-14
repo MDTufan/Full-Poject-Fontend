@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { WebController } from "../../ParentContext/Context";
 import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
 
 
 const Modal = ({productid,setproductid,product}) => {
@@ -8,9 +9,19 @@ const Modal = ({productid,setproductid,product}) => {
  
    const{userInfo}=useContext(WebController);
   
-  console.log(productid);
+  //  const { data: productall = [], refetch, isLoading } = useQuery({
+  //   queryKey: ['product'],
+  //   queryFn: async () => {
+  //       const res = await fetch(`http://localhost:3000/ProductAll/${id}`);
+  //       const data = await res.json();
+  //       return data
+       
+  //   }
+  // })
+ 
 
     const BookingProduct=(event)=>{
+     
       event.preventDefault();
       const form = event.target;
       const name = form.name.value;
@@ -21,9 +32,9 @@ const Modal = ({productid,setproductid,product}) => {
       const phone = form.phone.value;
 
       const booking={
-        phone,name
+        phone,name,email
       }
-console.log(phone,name,email);
+
       fetch('http://localhost:3000/bookings', {
             method: "POST",
             headers: {
@@ -50,7 +61,7 @@ console.log(phone,name,email);
   return (
     <div>
     
-<button className="btn btn-disign  px-3 " type="button" data-aos='fade-left' data-aos-duration='1000' data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button className="btn btn-disign  px-3 " type="button" data-aos='fade-left' data-aos-duration='1000' data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-unlock texticon"></i>
 Shop Now
 </button>                   
 
@@ -60,6 +71,7 @@ Shop Now
   <div className="modal-dialog ">
     <div className="modal-content xx-modal p-5">
     <form onSubmit={BookingProduct}>
+
   <div className="mb-3">
     
     <input type="text" name="name" value={userInfo?.displayName}   className="form-control"  />
@@ -73,7 +85,7 @@ Shop Now
   
   {/* <div class="mb-3">
    
-    <input type="text"  name="username" defaultValue={userInfo?.displayName} disabled class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <input type="text"  name="price" value={productid.price} disabled class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
     
   </div> */}
   {/* <div class="mb-3">

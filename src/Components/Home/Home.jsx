@@ -185,7 +185,7 @@ const Home = (productid) => {
                 </div>
             </div>
 
-            <div className="container">
+            {/* <div className="container">
                 <div className="add-section py-3">
                     <div className="row g-3">
                         <div className="col-12 col-lg-6">
@@ -213,7 +213,7 @@ const Home = (productid) => {
                         <button className="btn" type="button" id="button-addon2">Subscribe</button>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="sale-section">
                 <div data-aos='zoom-in' data-aos-duration='2000' className="container">
                     <h1>There's a <b>sale</b>.</h1>
