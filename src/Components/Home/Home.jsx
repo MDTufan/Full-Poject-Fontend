@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import bannerImgOne from '../../assets/pd1.png';
 import bannerImgTwo from '../../assets/p1.png';
 import bannerImgThree from '../../assets/p.png';
+import img8 from '../../assets/avatar1.png'
+import img9 from '../../assets/avatar2.png'
+import img10 from '../../assets/avatar3.png'
 import man from '../../assets/man.png';
-import Product from '../SignleProduct/Product';
+
 
 
 
@@ -214,9 +217,54 @@ const Home = (productid) => {
                     </div>
                 </div>
             </div> */}
+            <div className="container py-3 my-5">
+        <div className="row bg-white mb-5" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+          <div className="col-12 bginfo rounded">
+<h1 className="text-center text-black mt-5 mb-4">Testimonials</h1>
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  
+  <div class="carousel-inner  mb-5">
+    <div class="carousel-item active text-center mb-5" data-bs-interval="1000">
+      <img src={img8} class=" rounded-circle width-1 mt-3" alt="..."/>
+      <h2 className="text-black mt-5">Jacob Sikim </h2>
+      <p className="">Local shop owner</p>
+      <p className="text-black fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+      </p>
+      
+    </div>
+    <div class="carousel-item text-center mb-5" data-bs-interval="1000">
+    <img src={img9} class=" rounded-circle  width-1 mt-3" alt="..."/>
+      <h2 className="text-black mt-5"> David Niph </h2>
+      <p className="">Local shop owner</p>
+      <p className="text-black fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+      </p>
+    </div>
+    <div class="carousel-item text-center mb-5" data-bs-interval="1000" >
+    <img src={img10} class=" rounded-circle  width-1 mt-3" alt="..."/>
+      <h2 className="text-black mt-5">Saira Hakim  </h2>
+      <p className="">Local shop owner</p>
+      <p className="text-black fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+    </p>
+    </div>
+  </div>
+  <button class="carousel-control-prev fs-1" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon  fs-1 " aria-hidden="true"></span>
+    <span class="visually-hidden ">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+         </div>
+        </div>
+      </div>
             <div className="sale-section">
                 <div data-aos='zoom-in' data-aos-duration='2000' className="container">
                     <h1>There's a <b>sale</b>.</h1>
+                    
                     <Link to='/products'><button className='btn btn-pink rounded-pill btn-200px text-white'>Explore Now</button></Link>
                 </div>
             </div>

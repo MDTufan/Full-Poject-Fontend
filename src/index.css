@@ -257,7 +257,16 @@ html {
     background-repeat: no-repeat;
     padding-top: 100px;
 }
-
+.ppp{
+    color: #ff009d;
+    font-weight: bold;
+}
+.bginfo{
+    background-color: #002c3e;
+}
+.width-1{
+    border: 5px solid aqua;
+}
 /* slider Bg End */
 
 /* slider contents */

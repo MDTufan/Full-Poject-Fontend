@@ -40,7 +40,7 @@ const Header = () => {
         <header>
             <Navbar expand="lg">
                 <Container>
-                    <Navbar.Brand><Link to='/' className='logo'><img src={logo} alt="fisino" /></Link></Navbar.Brand>
+                    <Navbar.Brand><h3 className='ppp'>PRODUCT</h3></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
