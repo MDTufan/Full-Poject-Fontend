@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { WebController } from "../../ParentContext/Context";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const Modal = ({productid,setproductid,refetch}) => {
@@ -16,12 +17,12 @@ const Modal = ({productid,setproductid,refetch}) => {
       const name = form.name.value;
       // const stock = form.stock.value;
       // const price = form.price.value;
-      // const username = form.username.value;
+      const username = form.username.value;
       const email = form.email.value;
       const phone = form.phone.value;
 
       const booking={
-        phone,name
+        email,username,name
       }
 
       fetch('https://full-poject-backend.vercel.app/bookings', {
@@ -38,7 +39,7 @@ const Modal = ({productid,setproductid,refetch}) => {
 
           if(result.acknowledged){
             
-            alert("add bookings SuccessFully");
+            toast.success("add bookings SuccessFully");
             refetch();
             
           }
@@ -62,7 +63,7 @@ Shop Now
     <form onSubmit={BookingProduct}>
   <div className="mb-3">
     
-    <input type="text" name="name" value={userInfo?.displayName}   className="form-control"  />
+    <input type="text" name="username" value={userInfo?.displayName}   className="form-control"  />
     
   </div>
   <div className="mb-3">

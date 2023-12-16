@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { WebController } from '../../ParentContext/Context';
 import { useQuery } from 'react-query';
+import toast from 'react-hot-toast';
 
 const MyBooks = () => {
   // console.log(product);
@@ -26,7 +27,7 @@ const MyBooks = () => {
       .then(res => res.json())
       .then(data => {
           if(data.deletedCount > 0){
-              alert(` is deleted successfully`);
+             toast.success(` is deleted successfully`);
               
           }
         })
@@ -47,8 +48,10 @@ const MyBooks = () => {
       
       <th scope="col">#</th>
       <th scope="col">Name:</th>
+      <th scope="col">Price:</th>
       
       <th scope="col">Email:</th>
+      <th scope="col">Phone:</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -60,8 +63,9 @@ const MyBooks = () => {
                             bookings.map((booking, i) => <tr key={i}>
                            <th scope="row">{i + 1}</th>
                             <td>{booking.name}</td>
-                            {/* <td>{booking.phone}</td> */}
+                            <td>{booking.price}</td>
                             <td>{booking.email}</td>
+                            <td>{booking.phone}</td>
                             <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                             
                           </tr>)

@@ -20,6 +20,7 @@ import Blog from './Components/Blog/Blog';
 import YourPost from './Components/YourPost/YourPost';
 import Orders from './Components/Orders/Orders';
 import OrderRow from './Components/Orders/OrderRow';
+import PPP from './Components/Exam/Products/PPP';
 
 
 
@@ -47,9 +48,14 @@ function App() {
             return fetch('products.json')
           }
         },
+        // {
+        //   path: '/products',
+        //   element:<PrivateRouter> <Products></Products></PrivateRouter>,
+          
+        // },
         {
-          path: '/products',
-          element:<PrivateRouter> <Products></Products></PrivateRouter>,
+          path: '/PPP',
+          element: <PPP />,
           
         },
         {

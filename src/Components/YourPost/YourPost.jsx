@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 
 const YourPost = () => {
@@ -29,7 +30,7 @@ const handlepost=(data)=>{
           .then(res => res.json())
           .then(data => {
               if (data) {
-                  alert("uuuuuuuuuu")
+                  toast.success("Your Post Successfully")
               }
           }).catch(err => console.log("Doctor Error:", err))
   
@@ -66,11 +67,13 @@ const handlepost=(data)=>{
                   <div className="col-12 col-md-6 col-sm-6">
                     
                   <select {...register("category")} placeholder="Category" class="form-select" aria-label="Default select example">
-                    <option selected>Category</option>
-                    <option value="Electack">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">for</option>
+                    <option value="Other" selected>Category</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Jobs">Jobs</option>
+                    <option value="Trade and Industry">Trade and Industry</option>
+                    <option value="Other">Other</option>
               </select>
                   </div>
                 </div>

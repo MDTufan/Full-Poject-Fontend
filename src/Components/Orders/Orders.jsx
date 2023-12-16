@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { WebController } from '../../ParentContext/Context';
 import OrderRow from './OrderRow';
 import { useQuery } from 'react-query';
+import toast from 'react-hot-toast';
 
 const Orders = () => {
 
@@ -26,7 +27,7 @@ const Orders = () => {
         .then(res => res.json())
         .then(data => {
             if(data.deletedCount > 0){
-                alert(` is deleted successfully`);
+               toast.success(` Deleted successfully`);
                 
             }
           })
@@ -109,19 +110,20 @@ const Orders = () => {
         <div className="container mt-5">
             <div className="row my-5">
               
-                <div className="col-4">
-    
-                </div>
-                <div className="col-8">
+                
+                <div className="col-12 ">
                 <table class="table">
       <thead>
       <h3 className='py-3 text-center'>Your Order</h3>
         <tr>
          
           <th scope="col">#</th>
-          <th scope="col">Name:</th>
+          <th scope="col">Product Name:</th>
+          <th scope="col">Price:</th>
+          <th scope="col">User Name:</th>
           
           <th scope="col">Email:</th>
+          <th scope="col">Phone:</th>
           <th scope="col">Delete</th>
         </tr>
       </thead>
@@ -133,8 +135,10 @@ const Orders = () => {
                                 bookings.map((booking, i) => <tr key={i}>
                                <th scope="row">{i + 1}</th>
                                 <td>{booking.name}</td>
-                                {/* <td>{booking.phone}</td> */}
+                                <td>{booking.price}</td>
+                                <td>{booking.username}</td>
                                 <td>{booking.email}</td>
+                                <td>{booking.phone}</td>
                                 <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                                 
                               </tr>)

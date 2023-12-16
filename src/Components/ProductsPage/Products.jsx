@@ -5,7 +5,7 @@ import Product from '../SignleProduct/Product';
 
 import { useQuery } from 'react-query';
 import LottieLoader from '../Loader/LottieLoader';
-import Modal from '../Modal/Modal';
+
 
 
 
