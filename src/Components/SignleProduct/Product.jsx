@@ -1,11 +1,11 @@
 
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+
+
 import Modal from '../Modal/Modal';
 
 
 
-const Product = ({ product,setproductid,productid}) => {
+const Product = ({ product,setproductid,productid, refetch}) => {
 
     const { img, name, price, _id } = product;
     
@@ -22,11 +22,8 @@ const Product = ({ product,setproductid,productid}) => {
                         onClick={() => setproductid(product)}
                     > 
                    
-                     {
-                        product && <div>
-                             <Modal product={product}  setproductid={setproductid} productid={productid}/>  
-                        </div>
-                     }
+                      <Modal product={product}  refetch={ refetch} setproductid={setproductid} productid={productid}/>  
+                     
                     
                     </label>
                 </div>

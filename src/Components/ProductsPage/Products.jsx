@@ -1,18 +1,19 @@
-/* eslint-disable no-unused-vars */
+
 import React, {  useEffect, useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
+
 import Product from '../SignleProduct/Product';
-// import Home from '../Home/Home';
+
 import { useQuery } from 'react-query';
 import LottieLoader from '../Loader/LottieLoader';
+import Modal from '../Modal/Modal';
 
 
 
 const Products = () => {
 
-    // const[productall,setproductall]=useState([]);
+   
     const[productid,setproductid]=useState("");
-    // console.log(productid);
+    console.log(productid);
 
     const { data: productall = [], refetch, isLoading } = useQuery({
         queryKey: ['product'],
@@ -27,17 +28,7 @@ const Products = () => {
         return <LottieLoader />
     }
 
-    // useEffect(()=>{
-    //     // window.scrollTo(0, 0);
-    //     fetch('http://localhost:3000/ProductAll')
-    //     .then(res=>res.json())
-    //     .then(data =>{
-    //        setproductall(data);
-            
-    //     })
-
-    // },[])
-    // const products = useLoaderData();
+   
     
     return (
         <div className='products'>
@@ -55,6 +46,7 @@ const Products = () => {
                       productall.map(product => <Product 
                         key={product._id} 
                         product={product} 
+                        refetch={ refetch}
                         setproductid={setproductid}
                        productid={productid}
                         
@@ -65,7 +57,11 @@ const Products = () => {
                         )
                     }
 
-                        
+                        {/* <Modal
+                        productid={productid}
+                        setproductid={setproductid}
+                        refetch={refetch}
+                        ></Modal> */}
                 </div>
             </div>
         </div>

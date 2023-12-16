@@ -90,6 +90,7 @@ html {
 }
 .btn-pink {
     background-color: #ff009d;
+    font-weight: bold;
 }
 
 .btn-pink:hover {
@@ -408,7 +409,7 @@ footer ul li a {
 }
 
 .women {
-    background: url(./assets/women.png) no-repeat;
+    background: url(./assets/s1.jpg) no-repeat;
     background-size: 100%;
     height: 500px;
     padding-left: 120px;
@@ -427,7 +428,7 @@ footer ul li a {
 }
 
 .men {
-    background: url(./assets/men.png) no-repeat;
+    background: url(./assets/s2.jpg) no-repeat;
     background-size: 105%;
     height: 550px;
     padding-left: 80px;
@@ -558,7 +559,7 @@ footer ul li a {
 }
 
 .register {
-    background: url(./assets/accountBg.png) no-repeat;
+    background: url(./assets/1bg.jpg) no-repeat;
     background-size: cover;
     width: 100%;
     height: fit-content;

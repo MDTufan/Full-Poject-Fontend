@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-import aboutHero from '../../assets/about-img1.jpg';
-import aboutMen from '../../assets/about-img2.jpg';
+// import aboutHero from '../../assets/about-img1.jpg';
+// import aboutMen from '../../assets/about-img2.jpg';
 import b from '../../assets/b.jpg';
 import b1 from '../../assets/b1.jpg';
 import b2 from '../../assets/b2.png';
 import b3 from '../../assets/b3.png';
 import b4 from '../../assets/b4.png';
-import { Link } from 'react-router-dom';
+
 
 const Blog = () => {
     useEffect(() => {

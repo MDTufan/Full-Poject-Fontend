@@ -5,7 +5,7 @@ const YourPost = () => {
     const { register,handleSubmit , formState: { errors } } = useForm();
 
 const handlepost=(data)=>{
-    console.log(data);
+    
    const img = data.img[0];
    const formData = new FormData();
 
@@ -47,10 +47,10 @@ const handlepost=(data)=>{
               <div class="mb-3">
                
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-md-6 col-sm-6">
                   <input type="text"{...register("name")} placeholder="Name " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                   </div>
-                  <div className="col-6">
+                  <div className="col-12 col-md-6 col-sm-6">
                     
                 <input type="text" placeholder="seller" {...register("seller")} class="form-control"  />
                   </div>
@@ -60,10 +60,10 @@ const handlepost=(data)=>{
               <div class="mb-3">
                
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-md-6 col-sm-6">
                   <input type="text" placeholder="Phone" {...register("phone")} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                   </div>
-                  <div className="col-6">
+                  <div className="col-12 col-md-6 col-sm-6">
                     
                   <select {...register("category")} placeholder="Category" class="form-select" aria-label="Default select example">
                     <option selected>Category</option>
@@ -83,13 +83,13 @@ const handlepost=(data)=>{
               
 
                <div className="row">
-                <div className="col-4">
+                <div className="col-12 col-md-4 col-sm-4">
                 <input type="text" placeholder="Price" {...register("price")} class="form-control"  />
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-md-4 col-sm-4">
                 <input type="text" placeholder="stock" {...register("stock")} class="form-control"  />
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-md-4 col-sm-4">
                 <input type="text" placeholder="ratings" {...register("ratings")} class="form-control"  />
                 </div>
                </div>
