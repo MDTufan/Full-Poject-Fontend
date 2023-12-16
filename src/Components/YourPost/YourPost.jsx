@@ -21,7 +21,7 @@ const handlepost=(data)=>{
         console.log(formData);
 
 
-        fetch('http://localhost:3000/ProductAll', {
+        fetch('https://full-poject-backend.vercel.app/ProductAll', {
           method: 'POST',
           
           body: formData

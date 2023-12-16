@@ -6,7 +6,7 @@ const MyBooks = () => {
   // console.log(product);
 
     const { userInfo } = useContext(WebController)
-    const url = `http://localhost:3000/bookings?email=${userInfo?.email}`;
+    const url = `https://full-poject-backend.vercel.app/bookings?email=${userInfo?.email}`;
 
     const { data: bookings = [] } = useQuery({
         queryKey: ['bookings', userInfo?.email],
@@ -19,7 +19,7 @@ const MyBooks = () => {
 
     const handledelite=(id)=>{
       
-      const url = `http://localhost:3000/bookings/${id}`;
+      const url = `https://full-poject-backend.vercel.app/bookings/${id}`;
       fetch(url, {
           method: 'DELETE'
       })
@@ -42,11 +42,13 @@ const MyBooks = () => {
             <div className="col-8">
             <table class="table">
   <thead>
+  <h3 className='py-3 text-center'>My Booking</h3>
     <tr>
+      
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name:</th>
+      
+      <th scope="col">Email:</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -58,7 +60,7 @@ const MyBooks = () => {
                             bookings.map((booking, i) => <tr key={i}>
                            <th scope="row">{i + 1}</th>
                             <td>{booking.name}</td>
-                            <td>{booking.phone}</td>
+                            {/* <td>{booking.phone}</td> */}
                             <td>{booking.email}</td>
                             <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                             

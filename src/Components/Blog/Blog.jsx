@@ -21,10 +21,10 @@ const Blog = () => {
             
            <div className="container py-5">
             <div className="row py-5">
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <img className='img-fluid shadow-lg rounded'  src={b} alt="" />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div className="">
                         <h1>White is HTML ?</h1>
                         <p>HTML stands for Hypertext Markup Language. It is a standard markup language used to design the documents displayed in the browsers as a web page. This language can become more interactive and attractive by using CSS ( Cascading Style Sheet) and JS (JavaScript) within it.</p> <br/>
@@ -37,7 +37,7 @@ const Blog = () => {
            <div className="container py-5">
             <div className="row py-5">
                 
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div className="">
                         <h1>What is CSS?</h1>
                         <li>CSS stands for Cascading Style Sheets</li>
@@ -48,7 +48,7 @@ const Blog = () => {
                         <p>CSS can be used for very basic document text styling — for example, for changing the color and size of headings and links. It can be used to create a layout — for example, turning a single column of text into a layout with a main content area and a sidebar for related information. It can even be used for effects such as animation. Have a look at the links in this paragraph for specific examples.</p>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <img className='img-fluid shadow-lg rounded' src={b1} alt="" />
                 </div>
             </div>
@@ -56,10 +56,10 @@ const Blog = () => {
            </div>
            <div className="container py-5">
             <div className="row py-5">
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <img className='img-fluid shadow-lg rounded' src={b2} alt="" />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div className="">
                         <h1>White is Javascript ?</h1>
                         <p>JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else. (Okay, not everything, but it is amazing what you can achieve with a few lines of JavaScript code.)</p> <br/>
@@ -92,10 +92,10 @@ const Blog = () => {
             </div>
             <div className="container py-5">
             <div className="row py-5">
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <img className='img-fluid shadow-lg rounded' src={b3} alt="" />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div className="">
                         <h1>React...!</h1>
                         
@@ -108,10 +108,10 @@ const Blog = () => {
            </div>
            <div className="container py-5">
             <div className="row py-5">
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <img className='img-fluid shadow-lg rounded' src={b4} alt="" />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 col-sm-6">
                     <div className="">
                         <h1>White is Node.Js ?</h1>
                         <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.</p> <br/>

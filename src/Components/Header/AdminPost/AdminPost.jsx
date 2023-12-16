@@ -26,7 +26,7 @@ const handleadminpost=(data)=>{
         console.log(formData);
 
 
-        fetch('http://localhost:3000/ProductAll', {
+        fetch('https://full-poject-backend.vercel.app/ProductAll', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

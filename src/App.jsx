@@ -18,6 +18,8 @@ import MyBooks from './Components/Header/MyBooks';
 import AdminPost from './Components/Header/AdminPost/AdminPost';
 import Blog from './Components/Blog/Blog';
 import YourPost from './Components/YourPost/YourPost';
+import Orders from './Components/Orders/Orders';
+import OrderRow from './Components/Orders/OrderRow';
 
 
 
@@ -53,6 +55,11 @@ function App() {
         {
           path: '/blog',
           element:<Blog />
+          
+        },
+        {
+          path: '/orders',
+          element:<Orders />
           
         },
         {

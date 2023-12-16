@@ -24,7 +24,7 @@ const Modal = ({productid,setproductid,refetch}) => {
         phone,name
       }
 
-      fetch('http://localhost:3000/bookings', {
+      fetch('https://full-poject-backend.vercel.app/bookings', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
