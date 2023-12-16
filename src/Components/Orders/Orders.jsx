@@ -133,13 +133,13 @@ const Orders = () => {
     
                       
                                 bookings.map((booking, i) => <tr key={i}>
-                               <th scope="row">{i + 1}</th>
-                                <td>{booking.name}</td>
+                               <th scope="row ">{i + 1}</th>
+                                <td >{booking.name}</td>
                                 <td>{booking.price}</td>
                                 <td>{booking.username}</td>
                                 <td>{booking.email}</td>
                                 <td>{booking.phone}</td>
-                                <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
+                                <td type="button" class="btn xxbtn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                                 
                               </tr>)
                             }

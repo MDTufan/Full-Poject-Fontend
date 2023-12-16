@@ -54,7 +54,7 @@ function App() {
           
         // },
         {
-          path: '/PPP',
+          path: '/products',
           element: <PPP />,
           
         },

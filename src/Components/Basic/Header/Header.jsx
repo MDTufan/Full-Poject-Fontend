@@ -51,8 +51,9 @@ const Header = () => {
                             }
 
                             <Link to='/addpost' className='color-text fw-semibold px-3 py-3 nav-link'>Post Now</Link>
-                            {/* <Link to='/blog' className='color-text fw-semibold px-3 py-3 nav-link'>Blog</Link> */}
-                            <Link to='/PPP' className='color-text fw-semibold px-3 py-3 nav-link'>Products</Link>
+                           
+                            <Link to='/products' className='color-text fw-semibold px-3 py-3 nav-link'>Products</Link>
+                            <Link to='/blog' className='color-text fw-semibold px-3 py-3 nav-link'>Blog</Link>
                             <Link to='/deshbord' className='color-text fw-semibold px-3 py-3 nav-link'>Dashboard </Link>
                             
                            

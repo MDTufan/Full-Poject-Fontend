@@ -33,7 +33,7 @@ const Mo = ({product,setproductid,productid}) => {
   
             if(result.acknowledged){
               
-              toast.success("add ffffffffffffffffffffffffffffffffffffff");
+              toast.success("Successfully Done ! ");
               refetch();
               
             }

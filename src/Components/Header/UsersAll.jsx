@@ -78,7 +78,7 @@ fetch(url, {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='btn  btn-neutral'>Make Admin</button>}</td>
-                        <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(user._id)}>Remove User</button></td>
+                        <td type="button" class="btn xxbtn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(user._id)}>Remove User</button></td>
                       </tr>)
                     }
 

@@ -48,12 +48,13 @@ const handlepost=(data)=>{
               <div class="mb-3">
                
                 <div className="row">
-                  <div className="col-12 col-md-6 col-sm-6">
-                  <input type="text"{...register("name")} placeholder="Name " class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                  </div>
+                  
                   <div className="col-12 col-md-6 col-sm-6">
                     
-                <input type="text" placeholder="seller" {...register("seller")} class="form-control"  />
+                <input type="text" placeholder="Seller name" {...register("seller")} class="form-control"  />
+                  </div>
+                  <div className="col-12 col-md-6 col-sm-6">
+                  <input type="text"{...register("name")} placeholder="product name " class="form-control"  />
                   </div>
                 </div>
                 

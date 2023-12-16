@@ -526,8 +526,12 @@ footer ul li a {
 .bgxinfo{
     background-color: #1C2B35 !important;
 }
-.fff{
-    
+.xxbtn{
+    background-color: aquamarine !important;
+}
+
+.xxbtn:hover{
+background-color: red !important;
 }
 .imgall{
 

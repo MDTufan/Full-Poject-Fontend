@@ -65,8 +65,8 @@ const MyBooks = () => {
                             <td>{booking.name}</td>
                             <td>{booking.price}</td>
                             <td>{booking.email}</td>
-                            <td>{booking.phone}</td>
-                            <td type="button" class="btn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
+                            <td>{booking.email}</td>
+                            <td type="button" class="btn xxbtn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                             
                           </tr>)
                         }
