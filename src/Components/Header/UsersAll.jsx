@@ -1,4 +1,5 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { useQuery } from 'react-query';
 
 const UsersAll = () => {
@@ -39,7 +40,7 @@ fetch(url, {
 .then(res => res.json())
 .then(data => {
     if(data.deletedCount > 0){
-        alert(` is deleted successfully`);
+       toast.success(` Deleted successfully`);
         
     }
   })
@@ -78,6 +79,7 @@ fetch(url, {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user?.role !== 'admin' && <button onClick={() => handleMakeAdmin(user._id)} className='btn  btn-neutral'>Make Admin</button>}</td>
+                       
                         <td type="button" class="btn xxbtn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(user._id)}>Remove User</button></td>
                       </tr>)
                     }

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { WebController } from '../../ParentContext/Context';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 const MyBooks = () => {
   // console.log(product);
@@ -37,10 +38,10 @@ const MyBooks = () => {
     <div className="container">
         <div className="row">
           
-            <div className="col-4">
+            <div className="col-2">
 
             </div>
-            <div className="col-8">
+            <div className="col-10">
             <table class="table">
   <thead>
   <h3 className='py-3 text-center'>My Booking</h3>
@@ -52,6 +53,7 @@ const MyBooks = () => {
       
       <th scope="col">Email:</th>
       <th scope="col">Phone:</th>
+      <th scope="col">Payment</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
@@ -65,7 +67,21 @@ const MyBooks = () => {
                             <td>{booking.name}</td>
                             <td>{booking.price}</td>
                             <td>{booking.email}</td>
-                            <td>{booking.email}</td>
+                            <td>{booking.phone}</td>
+                            <td>
+                              {
+                              booking.price && !booking.paid &&  
+                              <Link to={`/deshbord/payment/${booking._id}`}>
+                                <button type="submit" className="btn btn-disign  px-5 ">Pay</button>
+                              </Link>
+                              
+                         
+                              
+                              }
+                              {
+                                booking.price && booking.paid &&  <button type="submit" className="btn btn-disign  px-5 ">Paid</button>
+                              }
+                              </td>
                             <td type="button" class="btn xxbtn btn-danger"><button className='btn  btn-neutral' onClick={()=>handledelite(booking._id)}>Remove User</button></td>
                             
                           </tr>)

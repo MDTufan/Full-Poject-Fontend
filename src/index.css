@@ -53,14 +53,16 @@ html {
 */
 
 .cardcolor{
-    background-color:wheat;
+    background-color: #2c2045 !important
+    
 }
 
 .cardx{
-    background-color: #002c3e !important;
+    background-color: #02DCFF!important;
+    color:rgb(24, 9, 9) !important ;
 }
 .x-icon{
-    color: white !important;
+    color: rgb(24, 9, 9) !important;
     font-size: 50px;
 }
 
@@ -231,20 +233,20 @@ html {
 /* slider Background */
 
 .slideBgOne {
-    background: url(./assets/1bg.jpg);
+    background: url(./assets/3bg.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 100px;
 }
 .bgg{
-    background: url(./assets/1bg.jpg);
+    background: url(./assets/3bg.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .slideBgTwo {
-    background: url(./assets/2bg.webp);
+    background: url(./assets/3bg.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -263,7 +265,19 @@ html {
     font-weight: bold;
 }
 .bginfo{
-    background-color: #002c3e;
+    background-color: #02DCFF;
+}
+.xxs{
+    
+    box-shadow: 0px 8px 17px  rgb(107, 65, 65);
+    transition: 1s all;
+}
+.xxs:hover{
+    box-shadow: 0px 0px 5px indigo,0px 0px 30px indigo,0px 0px 30px indigo,0px 0px 2500px indigo;
+}
+.wimg{
+    width: 350px;
+    height: 470px;
 }
 .width-1{
     border: 5px solid aqua;
@@ -524,7 +538,8 @@ footer ul li a {
     color: #fff;
 }
 .bgxinfo{
-    background-color: #1C2B35 !important;
+    background-color: #2c2045 !important;
+    
 }
 .xxbtn{
     background-color: aquamarine !important;

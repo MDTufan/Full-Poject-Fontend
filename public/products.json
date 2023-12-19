@@ -15,7 +15,7 @@
     {
         "id":"2",
         "category": "Old dirty t shirt",
-        "name": "Isolated on white background",
+        "name": "Isolated on white",
         "seller": "Product Shop",
         "price": 21,
         "stock": 79,
@@ -27,8 +27,8 @@
     },
     {
         "id":"3",
-        "category": "Old tv pictures are available under a royalty-free license",
-        "name": "Old tv  available under license",
+        "category": "Old tv pictures a",
+        "name": "Old tv  available under",
         "seller": "Product Shop",
         "price": 245,
         "stock": 20,
@@ -53,8 +53,8 @@
     },
     {
         "id":"5",
-        "category": "old Android users running versions",
-        "name": " Android users running versions",
+        "category": "old Android ",
+        "name": " Android users ",
         "seller": "Product Shop",
         "price": 287,
         "stock": 11,

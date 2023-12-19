@@ -10,14 +10,15 @@ import img8 from '../../assets/avatar1.png'
 import img9 from '../../assets/avatar2.png'
 import img10 from '../../assets/avatar3.png'
 import man from '../../assets/man.png';
-// import s1 from '../../assets/s1.jpg';
-// import s2 from '../../assets/s2.jpg';
+import { tabTitle } from '../../../Title';
+
 
 
 
 
 const Home = (productid) => {
     // const products = useLoaderData();
+    tabTitle("Product Selas")
     
     const[productall,setproductall]=useState([]);
     console.log(productall);
@@ -38,6 +39,7 @@ const Home = (productid) => {
         // <div className="">
         //    <h1> jjjjjjjj</h1>
         // </div>
+        
         <div className='home'>
             <div className="slider-section">
                 <Carousel data-bs-theme="dark" className='carousel-fade'>
@@ -104,8 +106,8 @@ const Home = (productid) => {
                             <div class="card cardx" >
                             <i class="bi bi-truck x-icon"></i>
                             <div class="card-body">
-                                <h5 className='text-white fw-bold'>Fast Delivery</h5>
-                                <p className='text-white'>Some quick example text to build ...</p>
+                                <h5 className=' fw-bold'>Fast Delivery</h5>
+                                <p className=''>Some quick example text to build ...</p>
                             </div>
                             </div>
                             </div>
@@ -113,8 +115,8 @@ const Home = (productid) => {
                          <div class="card cardx">
                          <i class="bi bi-cart-check x-icon"></i>
                             <div class="card-body">
-                            <h5 className='text-white fw-bold'>Free Shiping</h5>
-                                <p className='text-white'>Some quick example text to build ...</p>
+                            <h5 className=' fw-bold'>Free Shiping</h5>
+                                <p className=''>Some quick example text to build ...</p>
                             </div>
                             </div>
                             </div>
@@ -122,8 +124,8 @@ const Home = (productid) => {
                             <div class="card cardx" >
                             <i class="bi bi-gift x-icon"></i>
                                 <div class="card-body">
-                                <h5 className='text-white fw-bold'>Free Offer</h5>
-                                    <p className='text-white'>Some quick example text to build ...</p>
+                                <h5 className=' fw-bold'>Free Offer</h5>
+                                    <p className=''>Some quick example text to build ...</p>
                                 </div>
                                 </div>
                             </div>
@@ -144,12 +146,36 @@ const Home = (productid) => {
             <div className="product-top-section">
                 <div className="container">
                     <h2 className='text-center py-4 line'>TOP PRODUCTS</h2>
-                    <div className="row row-cols-1 row-cols-lg-3 g-4 py-5">
+                    <div className="row row-cols-1  row-cols-lg-3 g-4 py-5">
                         {
                           productall.map( (product,i)=>  <div key={i} className="card h-100 border-0 rounded-4  px-3 " data-aos="fade-up" data-aos-duration='2000'>
-                          <div className="card-img-top  shadow-lg  ">
+
+
+                        <div class="card bg-info xxs  wimg"  >
+                        <img src={product.img} class="card-img-top  img-fluid" alt="..."/>
+                        <div class="card-body rounded">
+                            <h5 className='mb-3 fw-bold'>{product.name}</h5>
+                            <div className="">
+                            <i class="bi  bi-star-fill text-warning"></i>
+                            <i class="bi  bi-star-fill text-warning"></i>
+                            <i class="bi   bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi  bi-star-fill text-warning"></i>
+                                </div>
+                            <div className="row">
+                                <div className="col-12">
+                                    <p className='text-black fw-bold py-3'><b>price:</b> $ {product.price}</p>
+                                </div>
+                               
+                            </div>
+                           <div className="text-center">
+                           <Link to='/products' data-aos='fade-left' data-aos-duration='1000' ><button className='btn btn-disign  px-4'>Shop Now</button></Link>
+                           </div>
+                        </div>
+                        </div>
+                          {/* <div className="card-img-top   shadow-lg  ">
                               <img className='img-fluid' src={product.img} alt='' />
-                              <div className="cart-order mb-5">
+                              <div className="cart-order  mb-5">
                                   
                                  
                                   <Link to='/products' data-aos='fade-left' data-aos-duration='1000' ><button className='btn btn-disign  px-4'>Shop Now</button></Link>
@@ -158,19 +184,26 @@ const Home = (productid) => {
                          
           
                               </div>
-                          </div>
-                          <div className="card-body cardcolor ">
-                              <h5 className="card-title">{product.name}</h5>
+                          </div> */}
+                          {/* <div className="card-body cardcolor ">
+                              <h4 className="card-title text-white">{product.name}</h4>
                               
                                
                               
+                                <div className="row">
+                                    <div className="col-6">
+                                    <p className="card-text text-success "><b>Price:</b> $ <span className='text-danger'>{product.price}</span> </p>
+                                    </div>
+                                    <div className="col-6">
+                                    <p className="card-text text-info"><b>Category:</b>{product.category}</p>
+                                    </div>
+                                </div>
                                 
-                                <p className="card-text text-secondary"><b>Category:</b>{product.category}</p>
-                                <p className="card-text text-success "><b>Price:</b> $ <span className='text-danger'>{product.price}</span> </p>
+                                
                             
                               
                                
-                          </div>
+                          </div> */}
                       </div>
                             )
                         }
@@ -220,7 +253,7 @@ const Home = (productid) => {
                         </div>
                     </div>
                 </div>
-                <div data-aos='zoom-in' data-aos-duration='2000' className="newslater">
+                <div data-aos='zoom-in' data-aos-duration='2000' className="newslater bginfo">
                     <h2 className='text-center'>NEWSLETTER</h2>
                     <h5 className="text-secondary text-center pb-4">Join now and get 10% off your next purchase!</h5>
                     <div className="input-group mb-3">
@@ -233,31 +266,31 @@ const Home = (productid) => {
         <div className="row bg-white mb-5" data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
-          <div className="col-12 bginfo rounded">
-<h1 className="text-center text-white mt-5 mb-4">Testimonials</h1>
+          <div className="col-12  rounded">
+<h1 className="text-center text-black mt-5 mb-4">Testimonials</h1>
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   
-  <div class="carousel-inner  mb-5">
+  <div class="carousel-inner bginfo  mb-5">
     <div class="carousel-item active text-center mb-5" data-bs-interval="1000">
       <img src={img8} class=" rounded-circle width-1 mt-3" alt="..."/>
-      <h2 className="text-white mt-5">Jacob Sikim </h2>
+      <h2 className=" mt-5">Jacob Sikim </h2>
       <p className="">Local shop owner</p>
-      <p className="text-white fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+      <p className=" fs-5">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
       </p>
       
     </div>
     <div class="carousel-item text-center mb-5" data-bs-interval="1000">
     <img src={img9} class=" rounded-circle  width-1 mt-3" alt="..."/>
-      <h2 className="text-white mt-5"> David Niph </h2>
+      <h2 className=" mt-5"> David Niph </h2>
       <p className="">Local shop owner</p>
-      <p className="text-white fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+      <p className=" fs-5">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
       </p>
     </div>
     <div class="carousel-item text-center mb-5" data-bs-interval="1000" >
     <img src={img10} class=" rounded-circle  width-1 mt-3" alt="..."/>
-      <h2 className="text-white mt-5">Saira Hakim  </h2>
+      <h2 className=" mt-5">Saira Hakim  </h2>
       <p className="">Local shop owner</p>
-      <p className="text-white fs-4">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+      <p className=" fs-5">" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
     </p>
     </div>
   </div>

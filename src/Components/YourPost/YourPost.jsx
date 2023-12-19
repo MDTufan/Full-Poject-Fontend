@@ -1,9 +1,12 @@
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import LottieLoader from "../Loader/LottieLoader";
+import { useNavigate } from "react-router-dom";
 
 
 const YourPost = () => {
     const { register,handleSubmit , formState: { errors } } = useForm();
+   
 
 const handlepost=(data)=>{
     
@@ -31,10 +34,16 @@ const handlepost=(data)=>{
           .then(data => {
               if (data) {
                   toast.success("Your Post Successfully")
+                  navigate('/products')
               }
           }).catch(err => console.log("Doctor Error:", err))
   
 }
+
+
+
+
+
 
   return (
     <div className="register  py-5">

@@ -3,10 +3,11 @@ import { useQuery } from 'react-query';
 import LottieLoader from '../../Loader/LottieLoader';
 import Modal from '../../Modal/Modal';
 import Mo from '../Morder/Mo';
+import YourPost from '../../YourPost/YourPost';
 
 
 const PPP = () => {
-  const[productid,setproductid]=useState('');
+  const[productid,setproductid]=useState('null');
   console.log(productid);
 
   const { data: productall = [], refetch, isLoading } = useQuery({
@@ -41,12 +42,14 @@ const PPP = () => {
                        product={product} 
                        setproductid={setproductid}
                        productid={productid}
+                       refetch={refetch}
                      
                        />
                         
                         )
                     }
 
+                      
                        
                 </div>
             </div>

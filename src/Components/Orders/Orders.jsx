@@ -3,8 +3,10 @@ import { WebController } from '../../ParentContext/Context';
 import OrderRow from './OrderRow';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
+import { tabTitle } from '../../../Title';
 
 const Orders = () => {
+  tabTitle("React App | orders");
 
     const { userInfo } = useContext(WebController)
     const url = `https://full-poject-backend.vercel.app/bookings?email=${userInfo?.email}`;
@@ -107,17 +109,17 @@ const Orders = () => {
 
         // </div>
         <div>
-        <div className="container mt-5">
+        <div className="container   mt-5">
             <div className="row my-5">
               
                 
-                <div className="col-12 ">
+                <div className="col-12 mt-5">
                 <table class="table">
       <thead>
       <h3 className='py-3 text-center'>Your Order</h3>
-        <tr>
+        <tr >
          
-          <th scope="col">#</th>
+          <th  scope="col">#</th>
           <th scope="col">Product Name:</th>
           <th scope="col">Price:</th>
           <th scope="col">User Name:</th>

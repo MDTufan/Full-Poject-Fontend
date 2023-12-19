@@ -12,15 +12,16 @@ import Register from './Components/Account/Register/Register';
 import Login from './Components/Account/Login/Login';
 import PrivateRouter from './Components/PrivateRouter/PrivateRouter';
 import Desh from './Components/Desh';
-import Part3 from './Components/Header/Part3';
+
 import UsersAll from './Components/Header/UsersAll';
 import MyBooks from './Components/Header/MyBooks';
 import AdminPost from './Components/Header/AdminPost/AdminPost';
 import Blog from './Components/Blog/Blog';
 import YourPost from './Components/YourPost/YourPost';
 import Orders from './Components/Orders/Orders';
-import OrderRow from './Components/Orders/OrderRow';
+
 import PPP from './Components/Exam/Products/PPP';
+import Payment from './Components/Header/Payment';
 
 
 
@@ -115,8 +116,9 @@ function App() {
         },
        
         {
-          path:"/deshbord/part3",
-          element: <Part3 />
+          path:"/deshbord/payment/:id",
+          loader:({params})=>fetch(`http://localhost:3000/bookings/${params.id}`),
+          element: <Payment />
         },
       ]
     }
