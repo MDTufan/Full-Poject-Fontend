@@ -164,7 +164,9 @@ const Home = (productid) => {
                                 </div>
                             <div className="row">
                                 <div className="col-12">
-                                    <p className='text-black fw-bold py-3'><b>price:</b> $ {product.price}</p>
+                               
+                                    <p className='text-black fw-bold pt-2'><b>category:</b> {product.category}</p>
+                                    <p className='text-black fw-bold '><b>price:</b> $ {product.price}</p>
                                 </div>
                                
                             </div>
